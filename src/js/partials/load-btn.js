@@ -1,0 +1,7 @@
+class LoadBtn {
+    constructor() {
+
+    }
+
+    
+}

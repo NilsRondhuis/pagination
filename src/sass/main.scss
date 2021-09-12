@@ -113,9 +113,41 @@ img {
 }
 
 .btn-load {
+    display: flex;
+    align-items: center;
     margin: 30px 0 0 0;
+
+    .spinner {
+        display: inline-block;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        // border-top: 2px solid white;
+        // border-left: 2px solid white;
+        border: 3px dashed white;
+        border-radius: 50%;
+        animation-name: spinnerInfinity;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+}
+
+.spinner.is-hidden {
+    display: none;
 }
 
 .btn-load.is-hidden {
     display: none;
+}
+
+@keyframes spinnerInfinity {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
 }
